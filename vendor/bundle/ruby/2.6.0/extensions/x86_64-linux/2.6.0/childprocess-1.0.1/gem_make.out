@@ -1,0 +1,5 @@
+current directory: /mnt/e/rails_projects/saas-project-app/vendor/bundle/ruby/2.6.0/gems/childprocess-1.0.1/ext
+/usr/share/rvm/rubies/ruby-2.6.3/bin/ruby mkrf_conf.rb
+
+current directory: /mnt/e/rails_projects/saas-project-app/vendor/bundle/ruby/2.6.0/gems/childprocess-1.0.1/ext
+/usr/share/rvm/rubies/ruby-2.6.3/bin/ruby -rrubygems /mnt/e/rails_projects/saas-project-app/vendor/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake RUBYARCHDIR\=/mnt/e/rails_projects/saas-project-app/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/childprocess-1.0.1 RUBYLIBDIR\=/mnt/e/rails_projects/saas-project-app/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/childprocess-1.0.1
