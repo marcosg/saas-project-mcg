@@ -10,15 +10,6 @@
       <a class="nav-item nav-link" href="#">Pricing</a>
       <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </div>
-    <div class="navbar-nav">
-      <% if current_user %>
-          <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
-                      edit_user_registration_path, title: 'Edit Profile', class: 'nav-link' %>
-          <%= link_to('Logout', destroy_user_session_path,
-                      class: 'btn btn-sm btn-danger nav-link text-white', title: 'Logout', method: :delete) %>
-      <% else %>
-          <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
-      <% end %>
-    </div>
+
   </div>
 </nav>
