@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">PhotoApp</a>
+  <a class="navbar-brand" href="#">SaaS-App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,6 +10,15 @@
       <a class="nav-item nav-link" href="#">Pricing</a>
       <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </div>
-
+    <div class="navbar-nav">
+      <% if current_user %>
+        <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
+                    edit_user_registration_path, title: 'Edit Profile', class: 'nav-link' %>
+        <%= link_to('Logout', destroy_user_session_path,
+                    class: 'btn btn-sm btn-danger nav-link text-white', title: 'Logout', method: :delete) %>
+      <% else %>
+        <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
+      <% end %>
+    </div>
   </div>
 </nav>

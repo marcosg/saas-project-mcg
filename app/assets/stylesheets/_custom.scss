@@ -14,7 +14,7 @@
   @extend .border-0;
   @extend .mx-auto;
   max-width: 500px;
-  h1{
+  h1, h2{
     @extend .bg-light;
     @extend .text-center;
     @extend .card-title;
@@ -25,10 +25,19 @@
     @extend .bg-light;
     @extend .card-body;
     @extend .border;
-
-    div:last-child {
+    div.field{
+      @extend .form-group;
+      input:not([type='checkbox']) {
+        @extend .form-control;
+      }
+    }
+    div.actions {
       @extend .row;
       @extend .justify-content-center;
+      input {
+        @extend .btn;
+        @extend .btn-primary;
+      }
     }
   }
   > div:last-child{

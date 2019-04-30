@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PhotoApp</title>
+  <title>SaaS-App</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -15,7 +15,7 @@
   <%= render 'layouts/navbar' %>'
 </head>
 
-<body class="<%= controller_name %> <%= action_name %>">
+<body class="<%= (controller_path.split('/').first) %> <%= controller_name %> <%= action_name %>">
 <%= render 'layouts/messages' %>
 <%= yield %>
 </body>
