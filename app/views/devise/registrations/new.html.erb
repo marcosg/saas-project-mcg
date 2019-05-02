@@ -22,6 +22,20 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
+    <%= f.fields_for :account do |w| %>
+      <div class="form-row">
+        <div class="field col-md-9">
+          <%= w.label :name, 'Organization' %>
+          <%= w.text_field :name, required: true, placeholder: 'Unique name for your organization' %>
+        </div>
+        <div class="field col-md-3">
+          <%= w.label :plan %>
+          <%= w.select :plan, options_for_select(Plan.options, params[:plan]), {}, required: true %>
+        </div>
+      </div>
+    <% end %>
+
+
     <div class="actions">
       <%= f.submit "Sign up" %>
     </div>

@@ -4,5 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
 
-  has_one :account
+  belongs_to :account
+  accepts_nested_attributes_for :account
+
+  acts_as_tenant(:account)
 end

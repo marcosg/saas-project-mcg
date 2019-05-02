@@ -25,12 +25,6 @@
     @extend .bg-light;
     @extend .card-body;
     @extend .border;
-    div.field{
-      @extend .form-group;
-      input:not([type='checkbox']) {
-        @extend .form-control;
-      }
-    }
     div.actions {
       @extend .row;
       @extend .justify-content-center;
@@ -46,11 +40,10 @@
     @extend .border-0;
   }
 }
-
-.plans{
-  @extend .row;
-  .plan{
-
+div.field{
+  @extend .form-group;
+  input:not([type='checkbox']), select {
+    @extend .form-control;
   }
 }
 
