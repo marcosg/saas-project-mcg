@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def set_tenant
     if current_user
-      current_account = current_user.account_id
+      current_account = current_user.account
       set_current_tenant(current_account)
     end
   end

@@ -12,11 +12,14 @@
   <%= javascript_include_tag "https://js.stripe.com/v3/" %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= render 'layouts/navbar' %>'
+
 </head>
 
-<body class="<%= (controller_path.split('/').first) %> <%= controller_name %> <%= action_name %>">
+<body class="<%= controller_path.gsub('/', ' ') %> <%= action_name %>">
+<header>
+  <%= render 'layouts/navbar' %>'
+</header>
 <%= render 'layouts/messages' %>
-<%= yield %>
+<%= tag.div(yield, class: "main") %>
 </body>
 </html>

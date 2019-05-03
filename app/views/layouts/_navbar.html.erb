@@ -12,6 +12,7 @@
     </div>
     <div class="navbar-nav">
       <% if current_user %>
+        <%= link_to('Invite user', new_user_invitation_path, class: "nav-item nav-link") %>
         <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
                     edit_user_registration_path, title: 'Edit Profile', class: 'nav-link' %>
         <%= link_to('Logout', destroy_user_session_path,

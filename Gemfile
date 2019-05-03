@@ -9,8 +9,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 
 gem 'devise'
-gem 'devise-bootstrap-views', '~> 1.0'
-gem 'stripe'
+gem 'devise_invitable', '~> 2.0.0'
 gem 'acts_as_tenant'
 
 # Use Puma as the app server
