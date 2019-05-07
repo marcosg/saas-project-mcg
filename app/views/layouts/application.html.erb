@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SaaSProjectApp</title>
+  <title>SaaSProjectApp - <%= current_tenant.name if current_tenant %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 

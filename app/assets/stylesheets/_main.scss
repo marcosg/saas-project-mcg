@@ -1,4 +1,6 @@
-
+.main{
+  @extend .container;
+}
 
 .btn-group-xs > .btn, .btn-xs {
   padding  : .25rem .4rem;

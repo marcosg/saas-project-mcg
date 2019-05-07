@@ -8,4 +8,10 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :account
 
   acts_as_tenant(:account)
+  extend DeviseOverrides
+
+  def self.new(*args)
+    self.unscoped { super(*args) }
+  end
+
 end

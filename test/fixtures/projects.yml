@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  details: MyString
+  expected_completion_date: 2019-05-03
+  account: one
+
+two:
+  title: MyString
+  details: MyString
+  expected_completion_date: 2019-05-03
+  account: two

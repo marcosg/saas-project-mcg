@@ -1,6 +1,5 @@
 <% if current_user %>
-  <h2><strong>Organization: </strong><%= current_tenant.name %></h2>
-  <h3><strong>User: </strong> <%= current_user.email %></h3>
+  <%= render 'projects/list' %>
 <% else %>
   <div class="jumbotron text-center">
     <h2>Welcome to the Project Management App!</h2>
