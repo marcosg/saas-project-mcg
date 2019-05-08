@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :expected_completion_date %>
-    <%= form.date_select :expected_completion_date %>
+    <%= form.text_field :expected_completion_date, data: {datepicker: true} %>
   </div>
 
   <div class="actions">

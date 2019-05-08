@@ -16,4 +16,9 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+@import 'jquery-ui/jquery-ui';
+@import 'jquery-ui/jquery-ui.structure';
+@import 'jquery-ui/jquery-ui.theme';
+
 @import 'main';

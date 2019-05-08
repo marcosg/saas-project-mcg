@@ -7,5 +7,8 @@ App.init = ->
   srSpan = $('<span/>').addClass('sr-only').text('(current)')
   $('.navbar-nav a[href="' + location.pathname + '"].nav-link').addClass('active').append(srSpan)
 
+  $('input[data-datepicker]').datepicker({dateFormat: 'dd-M-yy', showOtherMonths: true, \
+    selectOtherMonths: true, showButtonPanel: true})
+
 $(document).on "turbolinks:load", ->
   App.init()
