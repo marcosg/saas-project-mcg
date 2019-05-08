@@ -1,33 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Projects</h1>
-
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Details</th>
-    <th>Expected completion date</th>
-    <th>Actions</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @projects.each do |project| %>
+<% if @projects.size > 0 %>
+  <table class="table table-striped">
+    <thead>
     <tr>
-      <td><%= link_to project.title,
-                      project_path(project) %></td>
-      <td><%= project.details %></td>
-      <td><%= project.expected_completion_date %></td>
-      <td>
-        <%= link_to 'Edit', edit_project_path(project), class: "btn-xs btn-primary" %>
-        <%= link_to 'Delete', project, method: :delete, class: "btn-xs btn-danger", data: { confirm: 'Are you sure?' } %>
-      </td>
+      <th>Title</th>
+      <th>Details</th>
+      <th>Expected completion date</th>
+      <th>Actions</th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project.title,
+                        project_path(project) %></td>
+        <td><%= project.details %></td>
+        <td><%= project.expected_completion_date %></td>
+        <td>
+          <%= link_to 'Edit', edit_project_path(project), class: "btn-xs btn-primary" %>
+          <%= link_to 'Delete', project, method: :delete, class: "btn-xs btn-danger", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You don't have any projects</p>
+<% end %>
+
 
 <br>
-
-<%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
+<% if current_tenant.can_create_projects? %>
+  <%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
+<% end %>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @project.title %>
+  <h3><%= @project.title %></h3>
+  <h3><small>Organization - <%= current_tenant.name %></small></h3>
 </p>
 
 <p>
@@ -20,5 +20,6 @@
   <%= @project.account %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Back to Organization Home', root_path, class: "btn btn-primary" %>
+<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary" %>
+<%= link_to 'Delete', @project, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>

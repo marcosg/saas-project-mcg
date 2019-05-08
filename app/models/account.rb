@@ -4,5 +4,7 @@ class Account < ApplicationRecord
   validates_uniqueness_of :name
   validates_presence_of :name
 
-
+  def can_create_projects?
+    (plan == 'free' && projects.count < 1) || (plan == 'premium')
+  end
 end
